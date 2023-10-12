@@ -1,8 +1,7 @@
-const express = require('express');
+import { Router } from 'express';
+import { findAll } from '../controllers/employee.controller.js';
+const router = Router();
 
-const router = express.Router();
-const employeeController = require('../controllers/employee.controller')
+router.get('/findAll', findAll);
 
-router.get('/findAll', employeeController.findAll);
-
-module.exports = router;
+export default router;

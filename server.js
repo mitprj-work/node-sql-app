@@ -1,7 +1,9 @@
-const express = require('express');
+import express from 'express';
+import employeeRoute from './src/routes/employee.routes.js';
 
 const app = express();
-const employeeRoute = require('./src/routes/employee.routes')
+import cors from 'cors';
+app.use(cors());
 app.get('/', (req, res) => {
     res.send("THis IS FIRST API RESPONSE")
 })
