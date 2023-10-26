@@ -1,9 +1,11 @@
 import express from 'express';
+import bodyParser from 'body-parser';
 import employeeRoute from './src/routes/employee.routes.js';
 
 const app = express();
 import cors from 'cors';
 app.use(cors());
+app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.send("THis IS FIRST API RESPONSE")
 })
